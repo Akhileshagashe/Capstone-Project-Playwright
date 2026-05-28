@@ -1,0 +1,438 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: homepage\homepage.spec.js >> HOME_01 Verify AJIO homepage loads
+- Location: tests\homepage\homepage.spec.js:4:1
+
+# Error details
+
+```
+Error: expect(page).toHaveTitle(expected) failed
+
+Expected pattern: /AJIO/i
+Received string:  "Online Shopping Site for Women, Men, Kids Fashion, Lifestyle & More."
+Timeout: 10000ms
+
+Call log:
+  - Expect "toHaveTitle" with timeout 10000ms
+    16 × unexpected value "Online Shopping Site for Women, Men, Kids Fashion, Lifestyle & More."
+
+```
+
+```yaml
+- region "Promotional Banner Carousel":
+  - group "Slide 3 of 17":
+    - link "Armani Exchange up to forty percent off and Superdry minimum forty five percent off.":
+      - /url: https://ajio.com/s/min45percentoff-218933
+      - img "Armani Exchange up to forty percent off and Superdry minimum forty five percent off."
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - button "Go to slide 1"
+  - button "Go to slide 2"
+  - button "Go to slide 3"
+  - button "Go to slide 4"
+  - button "Go to slide 5"
+  - button "Go to slide 6"
+  - button "Go to slide 7"
+  - button "Go to slide 8"
+  - button "Go to slide 9"
+  - button "Go to slide 10"
+  - button "Go to slide 11"
+  - button "Go to slide 12"
+  - button "Go to slide 13"
+  - button "Go to slide 14"
+  - button "Go to slide 15"
+  - button "Go to slide 16"
+  - button "Go to slide 17"
+- region "Promotional Banner Carousel":
+  - group "Slide 3 of 4":
+    - img "IDBI"
+    - link "IDBI":
+      - /url: /idbi-new-tnc
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - button "Go to slide 1"
+  - button "Go to slide 2"
+  - button "Go to slide 3"
+  - button "Go to slide 4"
+- region "Jio Ads Carousel":
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - tab "Go to slide 1"
+  - tab "Go to slide 2" [selected]
+  - tab "Go to slide 3"
+  - tab "Go to slide 4"
+  - tab "Go to slide 5"
+  - tab "Go to slide 6"
+  - tab "Go to slide 7"
+  - tab "Go to slide 8"
+  - tab "Go to slide 9"
+  - tab "Go to slide 10"
+  - tab "Go to slide 11"
+  - tab "Go to slide 12"
+  - tab "Go to slide 13"
+  - tab "Go to slide 14"
+  - tab "Go to slide 15"
+  - tab "Go to slide 16"
+  - tab "Go to slide 17"
+  - tab "Go to slide 18"
+  - tab "Go to slide 19"
+  - tab "Go to slide 20"
+  - tab "Go to slide 21"
+  - tab "Go to slide 22"
+  - tab "Go to slide 23"
+  - tab "Go to slide 24"
+  - tab "Go to slide 25"
+- region "Image Banner":
+  - img "1"
+  - link "NA":
+    - /url: /s/freedel-1592986895
+- region "Image Banner":
+  - img "1"
+- region "Image Banner":
+  - img "1"
+- img "Trends under 399 DNMX Netplay and more"
+- link "NA":
+  - /url: /s/underrs399-120271
+- img "Yousta Under 499"
+- link "NA":
+  - /url: /s/underrs499-120272
+- img "Kurta & Kurts Sets Under 599 Avaasa Fusion and more"
+- link "NA":
+  - /url: /s/underrs599-120273
+- img "Azorte Min 70"
+- link "NA":
+  - /url: /s/min70percentoff-120274
+- img "Tops & tshirts Under 249 Teamspirt Lee cooper and more"
+- link "NA":
+  - /url: /s/underrs249-120275
+- img "Vibe nation Min 60"
+- link "NA":
+  - /url: /s/min60percentoff-120276
+- button "arrow front":
+  - img "arrow front"
+- region "Promotional Banner Carousel":
+  - group "Slide 1 of 1":
+    - img "Paytm cashback"
+    - link "NA":
+      - /url: /offer-paytm-page
+- region "Jio Ads Carousel":
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - tab "Go to slide 1"
+  - tab "Go to slide 2"
+  - tab "Go to slide 3"
+  - tab "Go to slide 4"
+  - tab "Go to slide 5"
+  - tab "Go to slide 6" [selected]
+  - tab "Go to slide 7"
+  - tab "Go to slide 8"
+  - tab "Go to slide 9"
+  - tab "Go to slide 10"
+  - tab "Go to slide 11"
+  - tab "Go to slide 12"
+  - tab "Go to slide 13"
+  - tab "Go to slide 14"
+  - tab "Go to slide 15"
+  - tab "Go to slide 16"
+  - tab "Go to slide 17"
+  - tab "Go to slide 18"
+  - tab "Go to slide 19"
+  - tab "Go to slide 20"
+- region "Jio Ads Carousel":
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - tab "Go to slide 1"
+  - tab "Go to slide 2"
+  - tab "Go to slide 3"
+  - tab "Go to slide 4"
+  - tab "Go to slide 5"
+  - tab "Go to slide 6" [selected]
+  - tab "Go to slide 7"
+  - tab "Go to slide 8"
+  - tab "Go to slide 9"
+  - tab "Go to slide 10"
+- region "Image Banner":
+  - img "1"
+- region "Promotional Banner Carousel":
+  - group "Slide 3 of 5":
+    - img "Minimum sixty percent off. Woman in Zwerlon blue patterned maxi dress. Raivani Enterprise and more. Offer valid with terms."
+    - link "Minimum 50 percent off on GAS and GANT. Man models a white t-shirt with an orange graphic print.":
+      - /url: /s/min45percentoff-188973
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - button "Go to slide 1"
+  - button "Go to slide 2"
+  - button "Go to slide 3"
+  - button "Go to slide 4"
+  - button "Go to slide 5"
+- region "Image Banner":
+  - img "1"
+- region "Promotional Banner Carousel":
+  - group "Slide 3 of 5":
+    - img "Minimum sixty percent off. Woman in Zwerlon blue patterned maxi dress. Raivani Enterprise and more. Offer valid with terms."
+    - link "Minimum fifty percent off on party wear featuring a woman in a green sparkly long sleeve gown. Shop Lulu and Sky, and Yuniqee.":
+      - /url: /s/min60percentoff-188978
+  - button "Previous Slide":
+    - img "carouselLeft"
+  - button "Next Slide":
+    - img "carouselRight"
+  - button "Pause Carousel":
+    - img "carouselPause"
+  - button "Go to slide 1"
+  - button "Go to slide 2"
+  - button "Go to slide 3"
+  - button "Go to slide 4"
+  - button "Go to slide 5"
+- region "Image Banner":
+  - img "1"
+  - link "NA":
+    - /url: /my-account/refer-and-earn
+- region "Image Banner":
+  - img "1"
+- img "Tshirts -USPA, Bullmer & MORE min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110796
+- img "Shirts - Arrow, Bene Kleed and more min 50"
+- link "NA":
+  - /url: /s/min50percentoff-110797
+- img "Jeans - Levis, Spykar and more min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110798
+- img "Trousers & Pants - Van Heusen, Dennislingo and more 40-70"
+- link "NA":
+  - /url: /s/40to70percentoff-110799
+- img "Watches Tommy Lacoste & more min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110800
+- img "Tops Gap M&S and more Upto 50"
+- link "NA":
+  - /url: /s/upto50percentoff-110801
+- img "Dresses - Fig Rio and more 50-70"
+- link "NA":
+  - /url: /s/50to70percentoff-110802
+- button "arrow front":
+  - img "arrow front"
+- region "Image Banner":
+  - img "1"
+- img "Sports shoes (Nike, Asics and more) Min 30"
+- link "NA":
+  - /url: /s/min30percentoff-110774
+- img "Sneakers (USPA, Puma and more) Min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110775
+- img "Flip Flops & Slippers (Crocs, Adidas and more) Min 30"
+- link "NA":
+  - /url: /s/min30percentoff-110776
+- img "Casual Shoes (Adidas Originals, Skechers and more) Min 30"
+- link "NA":
+  - /url: /s/min30percentoff-110777
+- img "Sandals (Lee Cooper, Woodland and more) Min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110778
+- img "Heeled Sandals - STEVE MADDEN, CLARKS and more min 50 (Chang"
+- link "NA":
+  - /url: /s/min50percentoff-110779
+- img "Formal Shoes Min 40 (LP, Red Chief and more)"
+- link "NA":
+  - /url: /s/min40percentoff-110780
+- img "Boots Min 50 DELIZE, LEE COOPER & MORE"
+- link "NA":
+  - /url: /s/min50percentoff-110781
+- button "arrow front":
+  - img "arrow front"
+- region "Image Banner":
+  - img "1"
+- img "Kurta Suit Sets (Avaasa, Ahika and more) 50-80"
+- link "NA":
+  - /url: /s/50to80percentoff-110767
+- img "Kurta and Kurtis (W, Kimayra and more) Min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110768
+- img "Men's Ethnic -Jompers, See designs and more min 60%"
+- link "NA":
+  - /url: /s/min60percentoff-110769
+- img "Sarees (Soch, Satarani and more) Min 40"
+- link "NA":
+  - /url: /s/min40percentoff-110770
+- img "Salwar & chududars - Siyahi, Fab India and more starting 34"
+- link "NA":
+  - /url: /s/startingatrs349-110771
+- img "Lehenga Choli Sets (Fusionic , KVS Fab and more) 50-80"
+- link "NA":
+  - /url: /s/50to80percentoff-110772
+- button "arrow front":
+  - img "arrow front"
+- region "Image Banner":
+  - img "1"
+- img "Innerwear for Him & Her - M&S, USPA & More 30-70"
+- link "NA":
+  - /url: /s/30to70percentoff-110783
+- img "Lingerie - Jockey, Zivame & more Starting 150"
+- link "NA":
+  - /url: /s/startingatrs150-110784
+- img "Trendy Bras -Hunkemoller, M&S and more Min 30"
+- link "NA":
+  - /url: /s/min30percentoff-110785
+- img "Panties - Amante, Triumph & more min 30"
+- link "NA":
+  - /url: /s/min30percentoff-110786
+- img "Nightwear for Him & Her -Damensch, Clovia & more under 999"
+- link "NA":
+  - /url: /s/underrs999-110787
+- img "Boxers, Briefs & Trunks YXYXX, Pepe Jeans and more Starting"
+- link "NA":
+  - /url: /s/startingatrs149-110788
+- button "arrow front":
+  - img "arrow front"
+- region "Image Banner":
+  - img "sdf"
+  - link "NA":
+    - /url: /ajiocare-tnc
+- strong: Ajio
+- link "Who We Are":
+  - /url: https://www.ajio.com/help/whoweare
+  - strong: Who We Are
+- link "Terms & Conditions":
+  - /url: https://www.ajio.com/help/termsAndCondition
+  - strong: Terms & Conditions
+- link "We Respect Your Privacy":
+  - /url: https://www.ajio.com/privacypolicy
+  - strong: We Respect Your Privacy
+- link "Fees & Payments":
+  - /url: https://www.ajio.com/fee-payment-promotion-policy
+  - strong: Fees & Payments
+- link "Returns & Refunds Policy":
+  - /url: https://www.ajio.com/return-refund-policy
+  - strong: Returns & Refunds Policy
+- link "Promotions Terms & Conditions":
+  - /url: https://www.ajio.com/ajio-own-sale-policy
+  - strong: Promotions Terms & Conditions
+- link "Blog":
+  - /url: https://blog.ajio.com/?_gl=1*j6pg02*_gcl_au*NTMzNjg2NzEwLjE3NTkyMTY0Nzc.*_ga*MTI5MTAxODIwMS4xNzUyNjY1MTIy*_ga_X3MNHK0RVR*czE3NjQwNTMzMDAkbzY4JGcxJHQxNzY0MDUzNDUyJGozMCRsMCRoMA..
+  - strong: Blog
+- strong: Help
+- link "Track your order":
+  - /url: https://www.ajio.com/my-account/orders
+  - strong: Track your order
+- link "FAQ":
+  - /url: https://www.ajio.com/selfcare
+  - strong: FAQ
+- link "Returns":
+  - /url: https://www.ajio.com/selfcare
+  - strong: Returns
+- link "Cancellations":
+  - /url: https://www.ajio.com/selfcare
+  - strong: Cancellations
+- link "Payments":
+  - /url: https://www.ajio.com/selfcare
+  - strong: Payments
+- link "Customer Care":
+  - /url: https://www.ajio.com/selfcare
+  - strong: Customer Care
+- link "How Do I Redeem My Coupon":
+  - /url: https://www.ajio.com/coupon-faq
+  - strong: How Do I Redeem My Coupon
+- strong: Shop by
+- link "All":
+  - /url: https://www.ajio.com/s/sale-number-1-5624-76591
+  - strong: All
+- link "Men":
+  - /url: https://www.ajio.com/shop/men
+  - strong: Men
+- link "Women":
+  - /url: https://www.ajio.com/shop/women
+  - strong: Women
+- link "Kids":
+  - /url: https://www.ajio.com/sections/kids
+  - strong: Kids
+- link "Indie":
+  - /url: https://www.ajio.com/shop/indie
+  - strong: Indie
+- link "Stores":
+  - /url: https://www.ajio.com/shop/stores
+  - strong: Stores
+- link "Home":
+  - /url: https://www.ajio.com/
+  - strong: Home
+- strong: Follows us
+- link "Facebook":
+  - /url: https://www.facebook.com/AJIOlife
+  - strong: Facebook
+- link "Instagram- AJIOlife":
+  - /url: https://www.instagram.com/AJIOlife/
+  - strong: Instagram- AJIOlife
+- link "Instagram- AJIO LUXE":
+  - /url: https://www.instagram.com/ajioluxe/
+  - strong: Instagram- AJIO LUXE
+- link "Twitter":
+  - /url: https://x.com/AJIOLife
+  - strong: Twitter
+- link "Pintrest":
+  - /url: https://www.pinterest.com/ajiolife/
+  - strong: Pintrest
+- strong: Payment methods
+- list:
+  - listitem:
+    - img "Net Banking": 
+  - listitem:
+    - img "Verified By Visa": 
+  - listitem:
+    - img "Master Card": 
+  - listitem:
+    - img "Cash on delivery": 
+  - listitem:
+    - img "Jio Money": 
+- strong: Secure systems
+- list:
+  - listitem:
+    - img "256 Bit Encryption": 
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } =
+  2  | require('@playwright/test');
+  3  | 
+  4  | test(
+  5  | 'HOME_01 Verify AJIO homepage loads',
+  6  | async ({ page }) => {
+  7  | 
+  8  |   await page.goto('/');
+  9  | 
+  10 |   await expect(page)
+> 11 |   .toHaveTitle(/AJIO/i);
+     |    ^ Error: expect(page).toHaveTitle(expected) failed
+  12 | 
+  13 | });
+```

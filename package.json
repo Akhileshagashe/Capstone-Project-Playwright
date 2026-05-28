@@ -1,0 +1,27 @@
+{
+  "name": "capstone-project-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akhileshagashe/Capstone-Project-Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akhileshagashe/Capstone-Project-Playwright/issues"
+  },
+  "homepage": "https://github.com/Akhileshagashe/Capstone-Project-Playwright#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "allure-commandline": "^2.42.0"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.9.0",
+    "dotenv": "^17.4.2"
+  }
+}
