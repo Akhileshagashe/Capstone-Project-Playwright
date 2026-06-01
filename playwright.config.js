@@ -1,5 +1,4 @@
-import { defineConfig, devices }
-from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
 
@@ -15,30 +14,21 @@ export default defineConfig({
 
     retries: 1,
 
-    reporter: [
-        ['html']
-    ],
-
     use: {
 
-        baseURL:
-            'https://justyourkicks.in',
+        baseURL: 'https://justyourkicks.in',
 
-        headless: false,
+        headless: process.env.CI ? true : false,
 
-        screenshot:
-            'only-on-failure',
+        screenshot: 'only-on-failure',
 
-        video:
-            'retain-on-failure',
+        video: 'retain-on-failure',
 
-        trace:
-            'retain-on-failure',
+        trace: 'retain-on-failure',
 
         actionTimeout: 15000,
 
-        navigationTimeout:
-            30000
+        navigationTimeout: 30000
     },
 
     projects: [
@@ -46,9 +36,7 @@ export default defineConfig({
             name: 'chromium',
 
             use: {
-                ...devices[
-                    'Desktop Chrome'
-                ]
+                ...devices['Desktop Chrome']
             }
         }
     ],
