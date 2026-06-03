@@ -1,5 +1,5 @@
 import { test, expect} from '@playwright/test';
-import { CheckoutPage } from '../../pages/checkout';
+import { CheckoutPage } from '../../pages/CheckoutPage';
 
 test.describe(
     'CHECKOUT FUNCTIONALITY TESTS',

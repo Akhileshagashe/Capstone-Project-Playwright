@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { CartPage } from '../../pages/cartPage';
+import { CartPage } from '../../pages/CartPage';
 
 test.describe('CART FUNCTIONALITY TESTS', () => {
 
