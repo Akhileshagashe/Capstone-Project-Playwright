@@ -1,3 +1,4 @@
+import { expect } from '@playwright/test';
 export class CheckoutPage {
 
     constructor(page) {
@@ -26,6 +27,14 @@ export class CheckoutPage {
         await this.page.goto(
             'https://justyourkicks.in/shop'
         );
+
+        await this.page.waitForLoadState('networkidle');
+
+        await expect(this.page.getByRole('button', {
+            name: /add to cart/i
+        }).first()).toBeVisible({
+            timeout: 30000
+        });
 
         await this.page
             .getByRole('button', {
