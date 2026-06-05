@@ -3,13 +3,14 @@ export class CartPage {
     constructor(page) {
         this.page = page;
 
-        this.cartItem = page.locator('.cart-item');
+        this.cartItem =
+            page.locator('text=Size:');
 
         this.increaseBtn =
-            page.locator('button:has-text("+")');
+            page.getByRole('button').nth(2);
 
         this.decreaseBtn =
-            page.locator('button:has-text("-")');
+            page.getByRole('button').nth(0);
 
         this.removeBtn =
             page.locator('button').filter({
@@ -17,7 +18,7 @@ export class CartPage {
             });
 
         this.proceedToCheckoutBtn =
-            page.getByRole('button', {
+            page.getByRole('link', {
                 name: /proceed to checkout/i
             });
 

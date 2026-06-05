@@ -1,0 +1,19 @@
+[
+  '1',   '',                  'Filters',
+  'All', 'Mens Sneakers',     'Mens Sports',
+  'All', 'Adidas',            'Puma',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  'Add to Cart',
+  '',    '',                  '',
+  '',    'Continue Shopping', 'Close'
+]
